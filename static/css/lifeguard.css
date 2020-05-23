@@ -1,0 +1,14 @@
+#lifeguard .container .center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#lifeguard .banner {
+	height: 100%;
+	padding-left: 28%;
+	margin-right: 1vw;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}

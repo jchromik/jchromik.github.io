@@ -1,0 +1,33 @@
+#researcher .cols {
+	flex-grow: 1;
+}
+
+#researcher .cols .text {
+	height: calc(50% - 1px);
+	text-align: center;
+}
+
+#researcher .cols .text:last-child {
+	padding-bottom: 50px;
+}
+
+#researcher hr {
+	border-top: 1px solid #111;
+	width: 70%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#researcher h1 {
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 0.5ex;
+	margin-top: 0ex;
+}
+
+#researcher h2 {
+	font-size: 20px;
+	font-weight: normal;
+	margin-bottom: 0.5ex;
+	margin-top: 0ex;
+}

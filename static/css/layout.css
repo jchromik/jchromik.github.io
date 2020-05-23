@@ -1,0 +1,51 @@
+@media (orientation: landscape) {
+	body {
+		padding-left: calc(50% - 450px);
+	}
+
+	.name {
+		padding-top: calc((100vh - 500px) / 2);
+		margin-top: 190px;
+	}
+
+	.page {
+		padding-left: calc(50% - 450px);
+		padding-right: calc(50% - 450px);
+		padding-top: calc((100vh - 500px) / 2);
+		margin-left: 400px;
+	}
+
+	.navitem {
+		padding-top: calc((100vh - 500px) / 2);
+		padding-bottom: 0;
+		margin-top: 270px;
+	}
+
+	#home .logo {
+		margin-top: -20px;
+	}
+}
+
+@media (orientation: portrait) {
+	body {
+		padding-left: calc(50% - 250px);
+	}
+
+	.page {
+		padding-left: calc(50% - 250px);
+		padding-right: calc(50% - 250px);
+		padding-top: calc(50vh - 200px);
+		width: 500px;
+		height: 500px;
+
+		font-size: 20px;
+	}
+
+	.name {
+		padding-top: calc(50vh - 300px);
+	}
+
+	.navitem {
+		padding-top: calc(50vh - 250px);
+	}
+}

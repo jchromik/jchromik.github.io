@@ -1,0 +1,148 @@
+@font-face {
+	font-family: 'Oswald';
+	src: url('../fonts/Oswald.woff');
+}
+
+body {
+	font-family: 'Oswald';
+	font-size: 20px;
+	letter-spacing: 1px;
+	line-height: 2ex;
+	
+	color: #111;
+
+	display: flex;
+	flex-flow: row;
+	margin: 0;
+}
+
+a {
+	color: inherit;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+td {
+	padding-right: 1em;
+}
+
+span.underline {
+	padding-bottom: 1.5px;
+	border-bottom: 1.5px solid #111;
+}
+
+.name {
+	position: absolute;
+	z-index: 20;
+	margin-left: 30px;
+	font-size: 60px;
+}
+
+.name a {
+	text-decoration: none;
+}
+
+.page {
+	position: absolute;
+	height: 500px;
+	width: 500px;
+	left: 0;
+	top: 0;
+	z-index: 10;
+
+	opacity: 0;
+	transition: opacity 0.1s linear;
+}
+
+.page .rows {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+}
+
+.page .cols {
+	display: flex;
+	flex-direction: column;
+}
+
+.page .flexpadding {
+	flex-grow: 1;
+}
+
+.page .vcenter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.navitem a {
+	position: relative;
+	z-index: 30;
+	font-size: 30px;
+	padding-bottom: 2px;
+	text-decoration: none;
+	transition: border-bottom 0.1s;
+}
+
+.route:first-child {
+	margin-left: 30px;
+}
+
+.navitem:not(:last-child) {
+	margin-right: 0.2em;
+}
+
+/* PAGE ROUTING CODE START */
+
+/**
+ * Skip this bit if you don't want a headache.
+ * This code uses the #hashlocation part of the URL and the CSS
+ * :target selector to hide/show pages.
+ * The #home page is activated by default, and will be deactived
+ * if any other page is activated.
+ **/
+#home > div, .route:target > div {
+	/* Display content of opened page, */
+	/* or home page if no page is selected */
+	opacity: 1;
+}
+
+#home > .page, .route:target > .page {
+	/* Ensure currently opened page is at z-top so that */
+	/* text can be selected */
+	z-index: 15;
+}
+
+@-moz-document url-prefix() {
+	.navitem a, span.underline {
+		/* firefox renders the font with a padding at the bottom */
+		display: inline-block;
+		height: 0.8em;
+	}
+}
+
+.route:target .navitem a {
+	/* Underline currently opened page's nav entry */
+	border-bottom: 1.5px solid #111;
+}
+
+.navitem a:hover {
+	/* Underline next to nav entries on hover */
+	border-bottom: 1.5px solid #111;
+}
+
+.route:target ~ #home > div {
+	/* Hide home page if any other page is open */
+	opacity: 0 !important;
+}
+
+.route:target ~ #home > .page {
+	/* Ensure home page is not at z-top if any other page is open */
+	z-index: 0;
+}
+
+/* PAGE ROUTING CODE END */

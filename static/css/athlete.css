@@ -1,0 +1,41 @@
+#athlete .tiles {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+#athlete .tiles .row {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	flex-basis: 0;
+}
+
+#athlete .tile {
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 0.6%;
+}
+
+#athlete .tile a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+}
+
+#athlete .tile.image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#athlete .tile.text {
+	border: 1px solid #111;
+	text-align: center;
+}
+
+#athlete #instagram .vcenter {
+	height: 100%;
+}
