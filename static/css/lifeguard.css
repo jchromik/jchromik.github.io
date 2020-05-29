@@ -12,3 +12,8 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+
+#lifeguard .content {
+	padding-left: .5em;
+	padding-right: .5em;
+}
